@@ -1,13 +1,13 @@
 //
-//  ViewController.h
+//  JoinViewController.h
 //  ImageUploader
 //
-//  Created by 조 성훈 on 13. 10. 22..
+//  Created by 조 성훈 on 2013. 11. 29..
 //  Copyright (c) 2013년 Seonghun Jo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface JoinViewController : UIViewController
 
 @end

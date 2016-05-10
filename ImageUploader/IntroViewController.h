@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserManager.h"
+#import "URLDownload.h"
 
-@interface IntroViewController : UIViewController
+@interface IntroViewController : UIViewController <UITextFieldDelegate>
+{
+    
+}
+
+@property (nonatomic, strong) IBOutlet UITextField *emailTextField;
+@property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
+
+@property (nonatomic, strong) IBOutlet UIButton *loginButton;
+@property (nonatomic, strong) IBOutlet UIButton *joinButton;
 
 @end

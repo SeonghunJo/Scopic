@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "IIViewDeckController.h"
+#import "ShadowNavigationViewController.h"
 
-@interface ViewDeckViewController : IIViewDeckController
+@interface ViewDeckViewController : IIViewDeckController <IIViewDeckControllerDelegate>
 
 @end

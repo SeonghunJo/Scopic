@@ -7,15 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ObjectiveFlickr.h"
 
-#import "IIViewDeckController.h"
+@class PhotoViewController;
+@class ImageScrollView;
 
-@interface PhotoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSURLConnectionDelegate, OFFlickrAPIRequestDelegate>
+
+@protocol PhotoViewControllerDelegate <NSObject>
+- (void)photoViewControllerDidCancel:(PhotoViewController *)controller;
+- (void)photoViewControllerDidSave:(PhotoViewController *)controller;
+@end
+
+@interface PhotoViewController : UIViewController
 {
-    OFFlickrAPIRequest *flickrRequest;
-    OFFlickrAPIContext *flickrContext;
+    ImageScrollView *_imageView;
+    UIImage *_image;
+    NSString *_imageURLString;
 }
 
+@property(nonatomic, strong) IBOutlet ImageScrollView *imageView;
+@property(nonatomic, strong) UIImage *image;
+@property(nonatomic, strong) NSString *imageURLString;
+
+@property (nonatomic, weak) id <PhotoViewControllerDelegate> delegate;
+
+- (IBAction)cancel:(id)sender;
+- (IBAction)done:(id)sender;
 
 @end

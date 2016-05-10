@@ -11,15 +11,15 @@
 
 #import "IIViewDeckController.h"
 
-@class IIViewDeckController;
+//@class IIViewDeckController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (retain, nonatomic) UIViewController *centerController;
-@property (strong, nonatomic) UIStoryboard *storyboard;
+//@property (retain, nonatomic) UIViewController *centerController;
+//@property (strong, nonatomic) UIStoryboard *storyboard;
 
-@property (strong, nonatomic) IIViewDeckController *viewDeck;
+//@property (strong, nonatomic) IIViewDeckController *viewDeck;
 //- (IIViewDeckController*)generateControllerStack;
 @end

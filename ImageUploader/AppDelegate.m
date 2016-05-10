@@ -11,6 +11,9 @@
 #import "IISideController.h"
 #import "LeftViewController.h"
 
+#import "LocationManager.h"
+#import "FlickrManager.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -21,7 +24,20 @@
     /* To adjust speed of open/close animations, set either of these two properties. */
     // deckController.openSlideAnimationDuration = 0.15f;
     // deckController.closeSlideAnimationDuration = 0.5f;
+    LocationManager *locationManager = [LocationManager sharedInstance];
+    [locationManager startUpdateLocation];
     
+    /*
+     // Navigation bar appearance (background and title)
+     
+     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor titleColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"FontNAme" size:titleSize], NSFontAttributeName, nil]];
+     
+     [[UINavigationBar appearance] setTintColor:[UIColor barColor]];
+     
+     // Navigation bar buttons appearance
+     
+     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor textBarColor], NSForegroundColorAttributeName, shadowColor, NSShadowAttributeName, [UIFont fontWithName:@"FontName" size:titleSize], NSFontAttributeName, nil];
+     */
     return YES;
 
 }

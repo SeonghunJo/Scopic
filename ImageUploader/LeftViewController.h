@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "IIViewDeckController.h"
 
+#import "GalleryViewController.h"
+
 @interface LeftViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     CGFloat width, height;
